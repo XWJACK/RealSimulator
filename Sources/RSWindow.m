@@ -24,6 +24,14 @@
     });
 }
 
+- (void)restoryWindowToOrigin {
+    _config = nil;//[[RSConfig alloc] initWithDesignResolutionType:RSConfigDesignResolutionTypeOrigin contentMode:_config.contentMode];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.frame = [UIScreen mainScreen].bounds;
+        [self layoutIfNeeded];
+    });
+}
+
 - (RSConfig *)currentConfig {
     return [_config copy];
 }
