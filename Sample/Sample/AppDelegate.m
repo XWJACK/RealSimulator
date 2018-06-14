@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 #import <RealSimulator/RealSimulator.h>
 
 @interface AppDelegate ()
@@ -19,10 +20,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[RSWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UIViewController *vc = [UIViewController new];
+    ViewController *vc = [ViewController new];
     vc.view.backgroundColor = UIColor.grayColor;
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
+    
+    RSWindow *window = (RSWindow *)[RSApplication sharedApplication].keyWindow;
+    [window reloadWindowWithConfig:[[RSConfig alloc] initWithDesignResolutionType:RSConfigDesignResolutionType58 contentMode:RSConfigContentModeScaleAspectFit]];
     return YES;
 }
 

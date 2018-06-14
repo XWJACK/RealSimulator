@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <RealSimulator/RealSimulator.h>
 
 @interface ViewController ()
 
