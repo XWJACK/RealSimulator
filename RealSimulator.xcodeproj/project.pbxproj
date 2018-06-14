@@ -14,6 +14,8 @@
 		041EB59F20D110A40027E8F7 /* RSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 041EB58A20D10ED50027E8F7 /* RSWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041EB5A220D1117B0027E8F7 /* RSConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 041EB5A020D1117B0027E8F7 /* RSConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041EB5A320D1117B0027E8F7 /* RSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 041EB5A120D1117B0027E8F7 /* RSConfig.m */; };
+		041EB5A620D207AD0027E8F7 /* RSApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 041EB5A420D207AD0027E8F7 /* RSApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		041EB5A720D207AD0027E8F7 /* RSApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 041EB5A520D207AD0027E8F7 /* RSApplication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		041EB58B20D10ED50027E8F7 /* RSWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSWindow.m; sourceTree = "<group>"; };
 		041EB5A020D1117B0027E8F7 /* RSConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSConfig.h; sourceTree = "<group>"; };
 		041EB5A120D1117B0027E8F7 /* RSConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSConfig.m; sourceTree = "<group>"; };
+		041EB5A420D207AD0027E8F7 /* RSApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSApplication.h; sourceTree = "<group>"; };
+		041EB5A520D207AD0027E8F7 /* RSApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSApplication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		041EB55720D10B7B0027E8F7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				041EB5A420D207AD0027E8F7 /* RSApplication.h */,
+				041EB5A520D207AD0027E8F7 /* RSApplication.m */,
 				041EB58A20D10ED50027E8F7 /* RSWindow.h */,
 				041EB58B20D10ED50027E8F7 /* RSWindow.m */,
 				041EB5A020D1117B0027E8F7 /* RSConfig.h */,
@@ -115,6 +121,7 @@
 			files = (
 				041EB59E20D110A00027E8F7 /* RealSimulator.h in Headers */,
 				041EB5A220D1117B0027E8F7 /* RSConfig.h in Headers */,
+				041EB5A620D207AD0027E8F7 /* RSApplication.h in Headers */,
 				041EB59F20D110A40027E8F7 /* RSWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041EB5A320D1117B0027E8F7 /* RSConfig.m in Sources */,
+				041EB5A720D207AD0027E8F7 /* RSApplication.m in Sources */,
 				041EB58D20D10ED50027E8F7 /* RSWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
