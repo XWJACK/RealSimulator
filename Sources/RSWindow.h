@@ -10,24 +10,24 @@
 
 @class RSConfig;
 
+NS_ASSUME_NONNULL_BEGIN
 /**
      self.window = [[RSWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
      self.window.rootViewController = <Your Custom Root View Controller>;
      [self.window makeKeyAndVisible];
  */
 @interface RSWindow : UIWindow
+
 /// Current config, it useless directory modify content, use `reloadWindowWithConfig:` instead.
-@property (nonatomic, readonly) RSConfig *currentConfig;
+@property (nonatomic, readonly, nullable) RSConfig *currentConfig;
 
 /**
  Reload new config
 
- @param config RSConfig
+ @param config RSConfig, if pass nil to config, it will restory to default config.
  */
-- (void)reloadWindowWithConfig:(RSConfig *)config;
+- (void)reloadWindowWithConfig:(RSConfig * _Nullable)config;
 
-/**
- Restory origin with no config.
- */
-- (void)restoryWindowToOrigin;
 @end
+
+NS_ASSUME_NONNULL_END

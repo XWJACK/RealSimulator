@@ -24,6 +24,8 @@ typedef NS_ENUM(NSUInteger, RSConfigContentMode) {
     RSConfigContentModeCenter,
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface RSConfig : NSObject
 @property (nonatomic, readonly) RSConfigDesignResolutionType designResolutionType;
 @property (nonatomic, readonly) RSConfigContentMode contentMode;
@@ -31,3 +33,5 @@ typedef NS_ENUM(NSUInteger, RSConfigContentMode) {
 
 - (instancetype)initWithDesignResolutionType:(RSConfigDesignResolutionType)type contentMode:(RSConfigContentMode)contentMode;
 @end
+
+NS_ASSUME_NONNULL_END

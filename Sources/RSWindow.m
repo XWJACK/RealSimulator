@@ -18,22 +18,15 @@
 
 - (void)reloadWindowWithConfig:(RSConfig *)config {
     _config = config;
+    
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.frame = [self makeRectWithSize:config.size insideRect:[UIScreen mainScreen].bounds withMode:config.contentMode];
-        [self layoutIfNeeded];
-    });
-}
-
-- (void)restoryWindowToOrigin {
-    _config = nil;//[[RSConfig alloc] initWithDesignResolutionType:RSConfigDesignResolutionTypeOrigin contentMode:_config.contentMode];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.frame = [UIScreen mainScreen].bounds;
+        self.frame = config == nil ? [UIScreen mainScreen].bounds : [self makeRectWithSize:config.size insideRect:[UIScreen mainScreen].bounds withMode:config.contentMode];
         [self layoutIfNeeded];
     });
 }
 
 - (RSConfig *)currentConfig {
-    return [_config copy];
+    return _config = nil ? nil : [_config copy];
 }
 
 #pragma mark - Private
