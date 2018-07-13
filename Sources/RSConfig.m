@@ -24,7 +24,7 @@
 }
 - (CGSize)size {
     switch (self.designResolutionType) {
-        case RSConfigDesignResolutionTypeOrigin: return [UIScreen mainScreen].bounds.size;
+        case RSConfigDesignResolutionTypeOrigin: return UIScreen.mainScreen.bounds.size;
         case RSConfigDesignResolutionType4: return CGSizeMake(320, 568);
         case RSConfigDesignResolutionType47: return CGSizeMake(373, 667);
         case RSConfigDesignResolutionType55: return CGSizeMake(414, 736);
