@@ -8,10 +8,12 @@
 
 ## Install
 
+Carthage only !!!
+
 ```bash
 github "XWJACK/RealSimulator"
 
-# New Run Script with Debug only 
+# New Run Script with debug only 
 if [ "$CONFIGURATION" == "Debug" ]; then
 /usr/local/bin/carthage copy-frameworks
 fi
@@ -32,9 +34,9 @@ typealias RSWindow = RealSimulator.RSWindow
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
 #if DEBUG
-var window: RSWindow?
+	var window: RSWindow?
 #else
-var window: UIWindow?
+	var window: UIWindow?
 #endif
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -46,7 +48,7 @@ var window: UIWindow?
 	   window = UIWindow(frame: UIScreen.main.bounds)
 	#endif
 	   
-	   window?.rootViewController = TabBarViewController()
+	   window?.rootViewController = UITabBarViewController()
 	   window?.makeKeyAndVisible()
 	   
 	   return true
@@ -67,4 +69,9 @@ var window: UIWindow?
  </tr>
 </table>
 
+# Donate
+
+If you think it useful, you can send me some BTC? ETH? or any crypto coin using [GitThanks](https://gitthanks.com/)
+
+Thanks!
 
